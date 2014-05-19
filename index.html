@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html data-ng-app>
+<head>
+	<title>My first Angular SPA</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</head>
+<body data-ng-init="names = ['Cameron Zaas', 'Emily Zaas', 'Liam Zaas', 'Dylan Zaas']">
+
+	<div class="container">
+		Name: {{name}}
+		<br/>
+		 <input type="text" data-ng-model="name">
+
+
+		 <h3>Looping with the ng-repeat directive</h3>
+
+		 <ul>
+		 	<li data-ng-repeat="personName in names">{{personName}}</li>
+		 </ul>
+
+
+
+	</div>
+
+</body>
+</html>
