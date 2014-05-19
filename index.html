@@ -4,11 +4,11 @@
 	<title>My first Angular SPA</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script type="text/javascript" src="js/angular.min.js"></script>
-	
+	<script type="text/javascript" src="js/main.js"></script>
 </head>
-<body data-ng-init="people = [{name:'Cameron Zaas', city:'Nipomo'}, {name:'Emily Zaas', city:'AG'}, {name:'Liam Zaas', city:'Pismo'}, {name:'Dylan Zaas', city:'San Luis Obispo'}]">
+<body>
 
-	<div class="container">
+	<div class="container" data-ng-controller="SimpleController">
 		Name: {{name}}
 		<br/>
 		 <input type="text" data-ng-model="name">
