@@ -4,9 +4,9 @@
 	<title>My first Angular SPA</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script type="text/javascript" src="js/angular.min.js"></script>
-	<script type="text/javascript" src="js/main.js"></script>
+	
 </head>
-<body data-ng-init="names = ['Cameron Zaas', 'Emily Zaas', 'Liam Zaas', 'Dylan Zaas']">
+<body data-ng-init="people = [{name:'Cameron Zaas', city:'Nipomo'}, {name:'Emily Zaas', city:'AG'}, {name:'Liam Zaas', city:'Pismo'}, {name:'Dylan Zaas', city:'San Luis Obispo'}]">
 
 	<div class="container">
 		Name: {{name}}
@@ -15,9 +15,8 @@
 
 
 		 <h3>Looping with the ng-repeat directive</h3>
-
 		 <ul>
-		 	<li data-ng-repeat="personName in names">{{personName}}</li>
+		 	<li data-ng-repeat="person in people | filter:name | orderBy:'city'">{{person.name}} - {{person.city}}</li>
 		 </ul>
 
 
